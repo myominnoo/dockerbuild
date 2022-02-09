@@ -4,3 +4,4 @@ LABEL maintainer="Rami Krispin <rami.krispin@gmail.com>"
 
 
 RUN sudo apt-get update && sudo apt-get install pandoc -y
+RUN echo 'This works'
