@@ -1,8 +1,7 @@
 name: Arkitect
 on:
   push:
-    branches:
-      Þ '*'
+    branches: [ main ]
     tags:
       Þ '*'
  pull_request:
