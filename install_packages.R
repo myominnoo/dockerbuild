@@ -1,8 +1,5 @@
 # installing package imports packages
-pkg_list <- c("textshaping",
-              "ragg",
-              "pkgdown",
-              "dplyr",
+pkg_list <- c("dplyr",
               "remotes",
               "devtools",
               "here",
