@@ -1,4 +1,4 @@
-name: Data Refresh
+name: Docker Build
 
 on: 
   push: 
@@ -27,7 +27,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/rdev:v0.2
+          tags: ${{ secrets.DOCKER_USERNAME }}/baser:v4.1.2.3
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
