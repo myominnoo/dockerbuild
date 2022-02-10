@@ -1,4 +1,4 @@
-FROM docker.io/rkrispin/covid19italy:prod.0.3.1
+ FROM docker.io/rkrispin/covid19italy:prod.0.3.1
 
 LABEL maintainer="Rami Krispin <rami.krispin@gmail.com>"
 
