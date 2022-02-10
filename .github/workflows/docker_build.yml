@@ -27,7 +27,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/baser:v4.1.2
+          tags: ${{ secrets.DOCKER_USERNAME }}/r:dev0.1
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
