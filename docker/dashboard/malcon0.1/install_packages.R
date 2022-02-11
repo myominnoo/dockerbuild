@@ -9,6 +9,7 @@ pkg_list <- c("dplyr",
               "rmarkdown",
               "tidyr",
               "testthat",
+              "pkgdown",
               "shiny",
               "plotly",
               "ggplot2",
@@ -25,8 +26,4 @@ for(i in pkg_list){
         stop(paste("Package", i, "is not available"))
     }
 }
-
-# install.packages('devtools')
-devtools::install_github('r-lib/ragg')
-install.packages('devtools', repos = "https://cran.rstudio.com/")
 
