@@ -9,9 +9,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN sudo apt-get update && sudo apt-get install libharfbuzz-dev libfribidi-dev -y
 
-# installing R packages
-RUN R -e "options(repos = c(ropensci = 'https://ropensci.r-universe.dev', CRAN = 'https://cloud.r-project.org')); install.packages('ruODK');"
-
 RUN mkdir packages
 COPY install_packages.R packages/
 RUN Rscript packages/install_packages.R
