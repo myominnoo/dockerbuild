@@ -27,7 +27,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/dashboard:malcon0.3
+          tags: ${{ secrets.DOCKER_USERNAME }}/dashboard:malcon0.1
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

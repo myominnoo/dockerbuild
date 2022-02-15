@@ -1,4 +1,10 @@
 
+# installing R packages
+options(repos = c(ropensci = 'https://ropensci.r-universe.dev', 
+                  CRAN = 'https://cloud.r-project.org'))
+install.packages('ruODK')
+
+
 # installing package imports packages
 pkg_list <- c("dplyr",
               "remotes",
@@ -13,6 +19,7 @@ pkg_list <- c("dplyr",
               "shiny",
               "plotly",
               "ggplot2",
+              "flexdashboard",
               "knitr",
               "usethis",
               "DT")
@@ -21,7 +28,7 @@ for(i in pkg_list){
         install.packages(pkgs = i, repos = "https://cran.rstudio.com/",
                          dependencies = TRUE)
     }
-    
+
     if(!i %in% rownames(installed.packages())){
         stop(paste("Package", i, "is not available"))
     }
@@ -29,14 +36,6 @@ for(i in pkg_list){
 
 
 
-# # installing R packages
-# options(repos = c(ropensci = 'https://ropensci.r-universe.dev', CRAN = 'https://cloud.r-project.org'))
-# install.packages('ruODK')
-# 
-# # install required packages
-# install.packages("flexdashboard", dependencies = TRUE)
-
-# 
 # # install.packages('devtools')
 # devtools::install_github('r-lib/ragg', dependencies = TRUE)
 # 
@@ -56,3 +55,9 @@ for(i in pkg_list){
 #     }
 # }
 # 
+
+
+# devtools::install_github("ropenscilabs/rnaturalearthdata")
+# install.packages("rnaturalearthhires",
+#                  repos = "http://packages.ropensci.org",
+#                  type = "source")
