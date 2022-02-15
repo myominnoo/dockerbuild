@@ -1,4 +1,4 @@
-FROM docker.io/myominnoo/dashboard:malcon0.1
+FROM docker.io/rocker/tidyverse:4.1.2
 
 LABEL maintainer="Myo Minn Oo <dr.myominnoo@gmail.com>"
 
