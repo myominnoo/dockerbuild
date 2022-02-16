@@ -1,4 +1,4 @@
-FROM docker.io/myominnoo/report:malcon0.3
+FROM docker.io/myominnoo/dashboard:malcon0.3
 
 LABEL maintainer="Myo Minn Oo <dr.myominnoo@gmail.com>"
 
