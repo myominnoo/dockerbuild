@@ -1,6 +1,8 @@
 
-install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
 devtools::install_github("r-spatial/mapview")
+devtools::install_github("ropensci/rnaturalearth")
+devtools::install_github("ropensci/rnaturalearthdata")
+devtools::install_github("ropensci/rnaturalearthhires")
 
 
 # # installing package imports packages
