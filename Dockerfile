@@ -3,6 +3,7 @@ FROM docker.io/myominnoo/dashboard:malcon0.3
 LABEL maintainer="Myo Minn Oo <dr.myominnoo@gmail.com>"
 
 # installing R packages
+RUN rm -r packages
 RUN mkdir packages
 COPY install_packages.R packages/
 RUN Rscript packages/install_packages.R
