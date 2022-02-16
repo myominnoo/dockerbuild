@@ -1,17 +1,6 @@
-FROM docker.io/myominnoo/dashboard:malcon0.1
+FROM docker.io/myominnoo/report:malcon0.3
 
 LABEL maintainer="Myo Minn Oo <dr.myominnoo@gmail.com>"
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-  libharfbuzz-dev \
-  libfribidi-dev \
-  && rm -rf /var/lib/apt/lists/*
-
-RUN sudo apt-get update && sudo apt-get install libharfbuzz-dev libfribidi-dev -y
-
-RUN sudo apt-get install libudunits2-dev libproj-dev libgdal-dev -y
-
-RUN sudo apt-get update && sudo apt-get install libharfbuzz-dev libfribidi-dev -y
 
 # installing R packages
 RUN mkdir packages
