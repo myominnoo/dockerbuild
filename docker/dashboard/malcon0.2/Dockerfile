@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN sudo apt-get update && sudo apt-get install libharfbuzz-dev libfribidi-dev -y
 
-RUN sudo apt-get install libudunits2-dev
 
 RUN rm -r packages
 RUN mkdir packages

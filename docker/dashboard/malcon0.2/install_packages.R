@@ -4,8 +4,8 @@ devtools::install_github("ropensci/rnaturalearth")
 devtools::install_github("ropensci/rnaturalearthdata")
 devtools::install_github("ropensci/rnaturalearthhires")
 
-install.packages("rnaturalearth", dependencies = TRUE)
-install.packages("mapview", dependencies = TRUE)
+install.packages("rnaturalearth")
+install.packages("mapview")
 
 # # installing package imports packages
 # pkg_list <- c("mapview", "sf", "leafpop", "rgeos", "rnaturalearth")
