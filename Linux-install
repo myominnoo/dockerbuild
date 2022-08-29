@@ -1,0 +1,21 @@
+
+# update ubuntu
+sudo apt-get update
+sudo apt-get upgrade -y
+
+# install google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+# install apps without additional parameters
+sudo snap install vlc krita gimp slack skype rclone thunderbird 
+
+# install text editors & IDE
+sudo snap install sublime-text --classic 
+sudo snap install pycharm-community --classic
+sudo snap install code --classic
+sudo snap install docker
+
+# install master pdf editor 
+wget https://code-industry.net/public/master-pdf-editor-5.8.70-qt5.x86_64.deb
+sudo dpkg -i master-pdf-editor*.deb
