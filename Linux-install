@@ -7,8 +7,11 @@ sudo apt-get upgrade -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+# install utilities
+sudo snap install gnome-system-monitor rclone
+
 # install apps without additional parameters
-sudo snap install vlc krita gimp slack skype rclone thunderbird zotero-snap
+sudo snap install vlc krita gimp slack skype thunderbird zotero-snap zoom-client 
 
 # install text editors & IDE
 sudo snap install sublime-text --classic 
@@ -27,3 +30,24 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
+
+# install R and RStudio
+# update indices
+sudo apt update -qq
+# install two helper packages we need
+sudo apt install --no-install-recommends software-properties-common dirmngr
+# add the signing key (by Michael Rutter) for these repos
+# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc 
+# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+
+sudo apt install --no-install-recommends r-base
+sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+sudo apt install --no-install-recommends r-cran-rstan 
+sudo apt install --no-install-recommends r-cran-tidyverse
+
+
+wget https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.07.1-554-amd64.deb
+sudo dpkg -i rstudio*.deb
