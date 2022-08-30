@@ -31,6 +31,9 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 
+
+sudo apt --fix-broken install -y 
+sudo apt install build-essential
 # install R and RStudio
 # update indices
 sudo apt update -qq
