@@ -8,7 +8,15 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # install utilities
-sudo snap install gnome-system-monitor rclone
+sudo snap install gnome-system-monitor rclone obs-studio
+
+sudo snap connect obs-studio:alsa
+sudo snap connect obs-studio:audio-record
+sudo snap connect obs-studio:avahi-control
+sudo snap connect obs-studio:camera
+sudo snap connect obs-studio:jack1
+sudo snap connect obs-studio:kernel-module-observe
+
 
 # install apps without additional parameters
 sudo snap install vlc krita gimp slack skype thunderbird zotero-snap zoom-client 
