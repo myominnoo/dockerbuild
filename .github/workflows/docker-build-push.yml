@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v5
         with: 
           push: true
-          tags: myominnoo/test:rstudio-mac
+          tags: myominnoo/rstudio:4.3.2
