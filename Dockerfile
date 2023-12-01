@@ -21,6 +21,8 @@ RUN apt-get clean all && \
     apt-get purge && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN Rscript -e "install.packages(c('rmarkdown', 'tidyverse', 'quarto', 'RSocrata'));"
+
 # installing R packages
 RUN mkdir packages
 COPY install_packages.R packages/
