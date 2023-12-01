@@ -17,13 +17,18 @@ RUN apt-get clean all && \
         liblzma-dev \
         libglpk40 \
         libgit2-dev \
+        libharfbuzz-dev \
+        libfribidi-dev \
     && apt-get clean all && \
     apt-get purge && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-RUN Rscript -e "install.packages(c('rmarkdown', 'tidyverse', 'quarto', 'RSocrata'));"
 
 # installing R packages
 RUN mkdir packages
 COPY install_packages.R packages/
 RUN Rscript packages/install_packages.R
+
+
+RUN sudo apt-get update && sudo apt-get install pandoc -y
+
+RUN git --version

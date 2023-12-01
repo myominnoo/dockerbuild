@@ -1,17 +1,41 @@
 # installing package imports packages
 pkg_list <- c(
     "devtools", 
+    "tidyverse",
+    "purrr", 
+    "fs", 
     "usethis", 
     "here", 
-    "tidyverse",
+    "flexdashboard", 
     "flextable", 
+    "plotly",
+    "reactable", 
+    "leaflet", 
+    "leafpop", 
     "ggprism", 
     "ggsci", 
-    "hrbrthemes"
+    "hrbrthemes", 
+    "RSocrata", 
+    "rmarkdown", 
+    "quarto"
 )
 
-## install pacman for meta package management.
-install.packages("pacman")
+install.packages(pkgs = pkg_list, repos = "https://cran.rstudio.com/")
 
-pacman::p_load(pkg_list, character.only = TRUE)
+# devtools::install_github("RamiKrispin/coronavirus", upgrade = "never")
 
+fail <- FALSE
+
+for(i in pkg_list){
+    
+    if(i %in% rownames(installed.packages())){
+        cat(i, "...OK\n")
+    } else {
+        cat(i, "...Fail\n")
+        fail <- TRUE
+    }
+    
+    if(fail){
+        stop("Fail to install some package/s")
+    }
+}
